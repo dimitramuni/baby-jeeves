@@ -25,9 +25,10 @@ open_ai_api_key=st.sidebar.text_input('Plug in OpenAI api key')
 
 # Button to start analysis
 if st.sidebar.button("Analyze Text"):
+    st_lottie('https://lottie.host/9d1bf3d4-651e-447f-b93b-e24f9efd7e5a/lO2JMi8PhD.json',height=300)
     if country and number_of_names and gender and open_ai_api_key:
         baby_name_generator = BabyNameGenerator(open_ai_api_key)
-        #st_lottie('https://lottie.host/9d1bf3d4-651e-447f-b93b-e24f9efd7e5a/lO2JMi8PhD.json',height=300)
+
         response = baby_name_generator.generate_baby_names(number_of_names, country, gender)
 
         st.subheader('Baby Names with meaning:\n')

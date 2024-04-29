@@ -14,13 +14,13 @@ class BabyNameGenerator:
     def generate_baby_names(self, number_of_names, country, gender):
         prompt_template_baby_name = PromptTemplate(
             input_variables=['number_of_names', 'gender', 'country'],
-            template='Suggest baby name {number_of_names} for a {gender} child from {country}'
+            template='Suggest {number_of_names} baby name(s) for a {gender} child from {country}'
         )
         baby_name_chain = LLMChain(llm=self.llm, prompt=prompt_template_baby_name, output_key='baby_names')
 
         prompt_template_baby_name_meaning = PromptTemplate(
             input_variables=['baby_names'],
-            template='Tell me the meaning of these {baby_names} in English'
+            template='Tell me the meaning of these {baby_names} in English in markdown format'
         )
         baby_name_meaning_chain = LLMChain(llm=self.llm, prompt=prompt_template_baby_name_meaning,
                                            output_key='baby_name_meanings')
