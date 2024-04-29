@@ -8,8 +8,8 @@ from langchain.chains import SequentialChain
 #from dotenv import load_dotenv
 #load_dotenv()
 class BabyNameGenerator:
-    def __init__(self):
-        self.llm = OpenAI(api_key=st.secrets["OPENAI_API_KEY"],temperature=0.8)
+    def __init__(self,api_key):
+        self.llm = OpenAI(api_key=api_key,temperature=0.8)
 
     def generate_baby_names(self, number_of_names, country, gender):
         prompt_template_baby_name = PromptTemplate(
