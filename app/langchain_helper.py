@@ -5,8 +5,8 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.chains import SimpleSequentialChain
 from langchain.chains import SequentialChain
-from dotenv import load_dotenv
-load_dotenv()
+#from dotenv import load_dotenv
+#load_dotenv()
 class BabyNameGenerator:
     def __init__(self):
         self.llm = OpenAI(api_key=os.environ['OPENAI_API_KEY'],temperature=0.8)
