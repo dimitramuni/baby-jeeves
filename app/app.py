@@ -1,10 +1,10 @@
 import streamlit as st
 from streamlit_lottie import st_lottie
 from langchain_helper import BabyNameGenerator
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
 # Configuration of page
-load_dotenv()
+#load_dotenv()
 
 st.set_page_config(page_icon=None, layout="centered", initial_sidebar_state="expanded",
                    menu_items={'Report a bug': 'mailto:muni.dimitra@gmail.com'})
