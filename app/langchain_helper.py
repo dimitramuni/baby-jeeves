@@ -9,7 +9,7 @@ from langchain.chains import SequentialChain
 #load_dotenv()
 class BabyNameGenerator:
     def __init__(self,api_key):
-        self.llm = OpenAI(api_key=api_key,temperature=0.8)
+        self.llm = OpenAI(api_key=api_key,temperature=0.2)
 
     def generate_baby_names(self, number_of_names, country, gender):
         prompt_template_baby_name = PromptTemplate(
