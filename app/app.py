@@ -33,7 +33,7 @@ gender = st.sidebar.selectbox('Gender of the baby', ('Male', 'Female', 'Gender F
 open_ai_api_key=st.sidebar.text_input('Plug in OpenAI api key')
 
 # Button to start analysis
-if st.sidebar.button("Analyze Text"):
+if st.sidebar.button("Fetch Names"):
     st_lottie('https://lottie.host/9d1bf3d4-651e-447f-b93b-e24f9efd7e5a/lO2JMi8PhD.json',height=300)
     if country and number_of_names and gender and open_ai_api_key:
         baby_name_generator = BabyNameGenerator(open_ai_api_key)
