@@ -36,7 +36,7 @@ gender = st.sidebar.selectbox('Gender of the baby', ('Male', 'Female', 'Gender F
 if st.sidebar.button("Fetch Names"):
     st_lottie('https://lottie.host/9d1bf3d4-651e-447f-b93b-e24f9efd7e5a/lO2JMi8PhD.json',height=300)
     if country and number_of_names and gender :
-        baby_name_generator = BabyNameGenerator(st.secrets["open_ai_api_key"])
+        baby_name_generator = BabyNameGenerator(st.secrets["OPENAI_API_KEY"])
 
         response = baby_name_generator.generate_baby_names(number_of_names, country, gender)
 
